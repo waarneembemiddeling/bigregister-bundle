@@ -16,5 +16,6 @@
         "psr-0": {
             "Wb\\Bundle\\BigRegisterBundle": ""
         }
-    }
+    },
+    "target-dir": "Wb/Bundle/BigRegisterBundle"
 }
