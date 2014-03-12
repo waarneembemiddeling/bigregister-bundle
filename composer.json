@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Wb\\Bundle\\BigRegisterBundle": "src/"
+            "Wb\\Bundle\\BigRegisterBundle": ""
         }
     }
 }
