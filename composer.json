@@ -1,0 +1,20 @@
+{
+    "name": "wb/bigregister-bundle",
+    "description": "Symfony2 bundle intergrating the Dutch BIG-Register SOAP client",
+    "keywords": ["BIG register", "BIG-register", "BIG-nummer", "bigregister.nl"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Richard van den Brand",
+            "email": "richard@vandenbrand.org"
+        }
+    ],
+    "require": {
+        "wb/bigregister-soap": ">=0.0.2"
+    },
+    "autoload": {
+        "psr-0": {
+            "Wb\\Bundle\\BigRegisterBundle": "src/"
+        }
+    }
+}

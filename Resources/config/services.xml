@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="wb_big_register.client.class">Wb\BigRegister\SoapClient\Client</parameter>
+        <parameter key="wb_big_register.service.class">Wb\BigRegister\SoapClient\Service</parameter>
+    </parameters>
+
+    <services>
+        <service id="wb_big_register.client" class="%wb_big_register.client.class%">
+            <argument>%wb_big_register.wsdl%</argument>
+        </service>
+        <service id="wb_big_register.service" class="%wb_big_register.service.class%">
+            <argument type="service" id="wb_big_register.client" />
+        </service>
+    </services>
+</container>
