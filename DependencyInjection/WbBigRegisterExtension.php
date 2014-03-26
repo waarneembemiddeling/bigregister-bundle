@@ -29,6 +29,11 @@ class WbBigRegisterExtension extends Extension
         } else {
             $wsdl = 'http://webservices.cibg.nl/Ribiz/OpenbaarV2.asmx?WSDL';
         }
+        
+        if (isset($config['cache'])) {
+            $container->setParameter('wb_big_register.cache.service_id', $config['cache']['service_id']);
+            $container->setParameter('wb_big_register.cache.ttl', $config['cache']['ttl']);
+        }
 
         $container->setParameter('wb_big_register.wsdl', $wsdl);
 

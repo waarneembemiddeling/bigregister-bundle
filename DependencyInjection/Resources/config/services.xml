@@ -7,11 +7,15 @@
     <parameters>
         <parameter key="wb_big_register.client.class">Wb\BigRegister\SoapClient\Client</parameter>
         <parameter key="wb_big_register.service.class">Wb\BigRegister\SoapClient\Service</parameter>
+        <parameter key="wb_big_register.client.user_params" type="collection" />
     </parameters>
 
     <services>
         <service id="wb_big_register.client" class="%wb_big_register.client.class%">
             <argument>%wb_big_register.wsdl%</argument>
+            <argument>%wb_big_register.client.user_params%</argument>
+            <argument />
+            <argument />
         </service>
         <service id="wb_big_register.service" class="%wb_big_register.service.class%">
             <argument type="service" id="wb_big_register.client" />
