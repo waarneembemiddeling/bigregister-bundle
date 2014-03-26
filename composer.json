@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "wb/bigregister-soap": ">=0.0.3"
+        "wb/bigregister-soap": "~0.0.3"
     },
     "autoload": {
         "psr-0": {
