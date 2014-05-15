@@ -16,6 +16,7 @@
             <argument>%wb_big_register.client.user_params%</argument>
             <argument />
             <argument />
+            <argument>true</argument>
         </service>
         <service id="wb_big_register.service" class="%wb_big_register.service.class%">
             <argument type="service" id="wb_big_register.client" />
