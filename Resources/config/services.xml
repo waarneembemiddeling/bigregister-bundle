@@ -14,8 +14,8 @@
         <service id="wb_big_register.client" class="%wb_big_register.client.class%">
             <argument>%wb_big_register.wsdl%</argument>
             <argument>%wb_big_register.client.user_params%</argument>
-            <argument />
-            <argument />
+            <argument>null</argument>
+            <argument>0</argument>
             <argument>true</argument>
         </service>
         <service id="wb_big_register.service" class="%wb_big_register.service.class%">
