@@ -5,10 +5,7 @@ This bundle integrates the [BIG-register SOAP client](https://github.com/waarnee
 
 ## Configuration
 
-Preferred configutation (this will use the acceptance environment when working in debug mode):
-
-    wb_big_register:
-        use_acceptance: %kernel.debug%
+There is no configration required by default. 
 
 ### Change the WSDL
 
