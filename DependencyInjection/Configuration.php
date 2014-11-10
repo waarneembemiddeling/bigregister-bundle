@@ -22,9 +22,6 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
-                ->booleanNode('use_acceptance')
-                    ->defaultTrue()
-                ->end()
                 ->scalarNode('wsdl')
                 ->end()
                 ->arrayNode('cache')

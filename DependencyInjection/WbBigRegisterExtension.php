@@ -24,8 +24,6 @@ class WbBigRegisterExtension extends Extension
 
         if (isset($config['wsdl'])) {
             $wsdl = $config['wsdl'];
-        } elseif ($config['use_acceptance']) {
-            $wsdl = 'http://webservices-acc.cibg.nl/Ribiz/OpenbaarV2.asmx?WSDL';
         } else {
             $wsdl = 'http://webservices.cibg.nl/Ribiz/OpenbaarV2.asmx?WSDL';
         }
