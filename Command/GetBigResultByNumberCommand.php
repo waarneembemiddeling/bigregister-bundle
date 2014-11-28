@@ -11,6 +11,7 @@ use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
+use Wb\BigRegister\SoapClient\Exception\ConnectionException;
 use Wb\BigRegister\SoapClient\Service;
 
 class GetBigResultByNumberCommand extends ContainerAwareCommand
@@ -29,19 +30,30 @@ class GetBigResultByNumberCommand extends ContainerAwareCommand
         /** @var Service $bigService */
         $bigService = $this->getContainer()->get('wb_big_register.service');
         $number = $input->getArgument('number');
-        $bigResult = $bigService->findByRegistrationNumber($number);
 
-        $formatter = function($value, $key) use ($output, &$formatter) {
-            if (is_scalar($value)) {
-                $output->writeln(sprintf('%s: %s', $key, $value));
-            } elseif(is_array($value)) {
-                $output->writeln(sprintf('%s:', $key));
-                array_walk($value, $formatter);
-            } elseif ($value instanceof \DateTime) {
-                $output->writeln(sprintf('%s: %s', $key, $value->format(\DateTime::ISO8601)));
-            }
-        };
+        try {
+            $bigResult = $bigService->findByRegistrationNumber($number);
+        } catch (ConnectionException $e) {
+            $output->writeln(sprintf('Error: %s', $e->getMessage()));
 
-        array_walk($bigResult, $formatter);
+            return;
+        }
+
+        if ($bigResult) {
+            $formatter = function($value, $key) use ($output, &$formatter) {
+                if (is_scalar($value)) {
+                    $output->writeln(sprintf('%s: %s', $key, $value));
+                } elseif(is_array($value)) {
+                    $output->writeln(sprintf('%s:', $key));
+                    array_walk($value, $formatter);
+                } elseif ($value instanceof \DateTime) {
+                    $output->writeln(sprintf('%s: %s', $key, $value->format(\DateTime::ISO8601)));
+                }
+            };
+
+            array_walk($bigResult, $formatter);
+        } else {
+            $output->writeln('No bigResult found');
+        }
     }
 }
