@@ -1,5 +1,6 @@
 BIG-Register Symfony2 bundle
 ----------------------------
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/waarneembemiddeling/bigregister-bundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/waarneembemiddeling/bigregister-bundle/?branch=master)
 
 This bundle integrates the [BIG-register SOAP client](https://github.com/waarneembemiddeling/bigregister-soap).
 
