@@ -33,7 +33,6 @@ class Configuration implements ConfigurationInterface
                         ->integerNode('ttl')
                             ->min(0)
                             ->isRequired()
-                            ->cannotBeEmpty()
                         ->end()
                     ->end()
                 ->end()
