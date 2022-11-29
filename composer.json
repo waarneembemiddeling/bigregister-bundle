@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "waarneembemiddeling/bigregister-soap": "^2.0.0"
+        "waarneembemiddeling/bigregister-soap": "^3.0.0"
     },
     "autoload": {
         "psr-0": {

@@ -1,43 +1,40 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "hash": "17fec1e6c84917aff7e5aea0fc24c199",
-    "content-hash": "92146d439d94569f1299b82a89453cc6",
+    "content-hash": "eeb557704bb3a522e3ad8abc06da5aa6",
     "packages": [
         {
             "name": "doctrine/cache",
-            "version": "v1.6.1",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "b6f544a20f4807e81f7044d31e679ccbb1866dc3"
+                "reference": "1ca8f21980e770095a31456042471a57bc4c68fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/b6f544a20f4807e81f7044d31e679ccbb1866dc3",
-                "reference": "b6f544a20f4807e81f7044d31e679ccbb1866dc3",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/1ca8f21980e770095a31456042471a57bc4c68fb",
+                "reference": "1ca8f21980e770095a31456042471a57bc4c68fb",
                 "shasum": ""
             },
             "require": {
-                "php": "~5.5|~7.0"
+                "php": "~7.1 || ^8.0"
             },
             "conflict": {
                 "doctrine/common": ">2.2,<2.4"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.8|~5.0",
-                "predis/predis": "~1.0",
-                "satooshi/php-coveralls": "~0.6"
+                "cache/integration-tests": "dev-master",
+                "doctrine/coding-standard": "^9",
+                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5",
+                "psr/cache": "^1.0 || ^2.0 || ^3.0",
+                "symfony/cache": "^4.4 || ^5.4 || ^6",
+                "symfony/var-exporter": "^4.4 || ^5.4 || ^6"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.6.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Doctrine\\Common\\Cache\\": "lib/Doctrine/Common/Cache"
@@ -49,16 +46,16 @@
             ],
             "authors": [
                 {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
                     "name": "Roman Borschel",
                     "email": "roman@code-factory.org"
                 },
                 {
                     "name": "Benjamin Eberlei",
                     "email": "kontakt@beberlei.de"
-                },
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com"
                 },
                 {
                     "name": "Jonathan Wage",
@@ -69,32 +66,57 @@
                     "email": "schmittjoh@gmail.com"
                 }
             ],
-            "description": "Caching library offering an object-oriented API for many cache backends",
-            "homepage": "http://www.doctrine-project.org",
+            "description": "PHP Doctrine Cache library is a popular cache implementation that supports many different drivers such as redis, memcache, apc, mongodb and others.",
+            "homepage": "https://www.doctrine-project.org/projects/cache.html",
             "keywords": [
+                "abstraction",
+                "apcu",
                 "cache",
-                "caching"
+                "caching",
+                "couchdb",
+                "memcached",
+                "php",
+                "redis",
+                "xcache"
             ],
-            "time": "2016-10-29 11:16:17"
+            "support": {
+                "issues": "https://github.com/doctrine/cache/issues",
+                "source": "https://github.com/doctrine/cache/tree/2.2.0"
+            },
+            "funding": [
+                {
+                    "url": "https://www.doctrine-project.org/sponsorship.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.patreon.com/phpdoctrine",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fcache",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-05-20T20:07:39+00:00"
         },
         {
             "name": "waarneembemiddeling/bigregister-soap",
-            "version": "2.0.0",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/waarneembemiddeling/bigregister-soap.git",
-                "reference": "75e40166228f198aa6c0ed5f2aeaf95b7cb32e81"
+                "reference": "8d440f13d369beb8bce63fc4e5edb430bfb18a08"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/waarneembemiddeling/bigregister-soap/zipball/75e40166228f198aa6c0ed5f2aeaf95b7cb32e81",
-                "reference": "75e40166228f198aa6c0ed5f2aeaf95b7cb32e81",
+                "url": "https://api.github.com/repos/waarneembemiddeling/bigregister-soap/zipball/8d440f13d369beb8bce63fc4e5edb430bfb18a08",
+                "reference": "8d440f13d369beb8bce63fc4e5edb430bfb18a08",
                 "shasum": ""
             },
             "require": {
                 "doctrine/cache": ">=1.0",
                 "ext-soap": "*",
-                "php": ">=5.6.0"
+                "php": "~8.0.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "^5.6"
@@ -102,8 +124,8 @@
             "type": "library",
             "autoload": {
                 "psr-0": {
-                    "Wb\\BigRegister\\SoapClient": "src/",
-                    "Wb\\Test": "tests/"
+                    "Wb\\Test\\": "tests/",
+                    "Wb\\BigRegister\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -116,14 +138,18 @@
                     "email": "richard@vandenbrand.org"
                 }
             ],
-            "description": "php 5.6+ implementation of the Dutch BIG Register SOAP interface",
+            "description": "php 8.0+ implementation of the Dutch BIG Register SOAP interface",
             "keywords": [
                 "BIG register",
                 "BIG-nummer",
                 "BIG-register",
                 "bigregister.nl"
             ],
-            "time": "2016-11-29 11:03:51"
+            "support": {
+                "issues": "https://github.com/waarneembemiddeling/bigregister-soap/issues",
+                "source": "https://github.com/waarneembemiddeling/bigregister-soap/tree/3.0.0"
+            },
+            "time": "2022-11-29T18:57:09+00:00"
         }
     ],
     "packages-dev": [],
@@ -133,5 +159,6 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
 }
