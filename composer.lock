@@ -101,22 +101,22 @@
         },
         {
             "name": "waarneembemiddeling/bigregister-soap",
-            "version": "3.0.0",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/waarneembemiddeling/bigregister-soap.git",
-                "reference": "8d440f13d369beb8bce63fc4e5edb430bfb18a08"
+                "reference": "43d2a4115f2ee9d28aa215557208a36a6d2896ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/waarneembemiddeling/bigregister-soap/zipball/8d440f13d369beb8bce63fc4e5edb430bfb18a08",
-                "reference": "8d440f13d369beb8bce63fc4e5edb430bfb18a08",
+                "url": "https://api.github.com/repos/waarneembemiddeling/bigregister-soap/zipball/43d2a4115f2ee9d28aa215557208a36a6d2896ee",
+                "reference": "43d2a4115f2ee9d28aa215557208a36a6d2896ee",
                 "shasum": ""
             },
             "require": {
                 "doctrine/cache": ">=1.0",
                 "ext-soap": "*",
-                "php": "~8.0.0"
+                "php": "^8.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "^5.6"
@@ -147,9 +147,9 @@
             ],
             "support": {
                 "issues": "https://github.com/waarneembemiddeling/bigregister-soap/issues",
-                "source": "https://github.com/waarneembemiddeling/bigregister-soap/tree/3.0.0"
+                "source": "https://github.com/waarneembemiddeling/bigregister-soap/tree/3.1.0"
             },
-            "time": "2022-11-29T18:57:09+00:00"
+            "time": "2022-11-29T19:58:49+00:00"
         }
     ],
     "packages-dev": [],
